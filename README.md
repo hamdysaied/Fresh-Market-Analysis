@@ -114,8 +114,3 @@ All dimension tables must be related to `'Sales Fact'`. If your tables or column
 ```
 
 ---
-
-
-## 👤 Author
-
-**Your name**: [LinkedIn](https://www.linkedin.com/) · [GitHub](https://github.com/)
