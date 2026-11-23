@@ -1,0 +1,96 @@
+PROMPT 1 - Landing page
+Attach: screenshot of the current landing page, logo, background photo
+======================================================================
+i know you expert in data visualization
+so my project about dashboard for fresh market , i do a landing page using power bi for this project (note : landing page is attached with this prompt )
+your take i need a dax contain html content contain code for landing page :
+use the same theme color related to this project , and background , logo for this dashborad is attached with this prompt ,
+do a prof landing page and animation for all cards ,
+the formula for cards are :
+ 
+T_Sales = sum('Sales Fact'[Total Sales])
+Total orders = DISTINCTCOUNT('Sales Fact'[Order ID])
+Total Profit = sum('Sales Fact'[Total Profit])
+Profit Margin = DIVIDE([Total Profit],[Total sales])
+Total product with names = COUNTA('Product Dim'[Product Name])
+ 
+do a light mode and dark mode for this landing page
+ 
+======================================================================
+PROMPT 2 - Landing page: improvements
+Attach: screenshot of the result, logo, background photo
+======================================================================
+perfect , this is perfect design but i have comments
+1-  add logo for frsh market
+2- improve the light mode design
+3- add  img back ground  related to my design
+4- keep dark mode
+======================================================================
+Overview page
+======================
+ebuild it as ONE DAX measure that returns full HTML/CSS/JS for the HTML Content visual (1), matching the screenshot's layout, colors, and charts as closely as possible. Ask me for the real column names.
+
+Design: clean, premium, fresh look with rounded cards, soft shadows, smooth transitions, animated numbers and bars, and tooltips on every chart element.
+
+Replace the 3 left slicers with a JS filter system (no Power BI slicers):
+- "Filters" button with active-count badge + "Reset filters"
+- Slide-in side panel with veil and blur; closes via X, veil, or Escape
+- Multi-select chips for Year (quick: All / Last 2 / Last 3), Region, Category, Ship Mode
+- Staged state: nothing changes until "Apply filters"
+- Empty group = All; OR within a group, AND between groups
+- Removable chips for active filters
+- Click a bar, slice, or point to select it (others dimmed)
+- One renderAll() redraws everything
+
+ES5 JS only, no libraries, no network requests, escape apostrophes. Output one paste-ready DAX measure.1280*720
+========================================================================================
+Customer Performance
+=======================================================
+Rebuild the attached "Customer Performance" Power BI dashboard as ONE DAX measure that returns full HTML/CSS/JS for the HTML Content visual (1280x720). Match the screenshot's layout and colors (dark green theme, 5x2 grid of top-10 customer cards), but make it cleaner and more premium.
+
+Each card shows:
+- Rank label ("TOP #n CUSTOMER"), customer name, and a colored accent border
+- A fake avatar (inline SVG, generated deterministically from the customer name)
+- Segment, City and Country, and Region
+- Orders, Quantity, Profit and Profit margin
+- A Total Sales box with an animated value, a progress bar and "% of total sales"
+
+Design: rounded cards, soft shadows, smooth transitions, animated numbers and bars, and a tooltip on every element.
+
+Replace the Year and Region slicers with a JS filter system (no Power BI slicers):
+- "Filters" button with an active-count badge, plus "Reset filters"
+- Slide-in side panel with a veil and blur, closing via X, the veil, or Escape
+- Multi-select chips for Year (quick: All / Last 2 / Last 3), Region and Segment
+- Staged state: nothing changes until "Apply filters"
+- Empty group = All; OR within a group, AND between groups
+- Removable chips for active filters
+- Click a card to select it (others dimmed)
+- One renderAll() redraws everything
+
+Extras: sort switch (Sales / Profit / Orders), pagination arrows for the next 10 customers, and a small sales sparkline per card.
+
+Rules: ES5 JS only, no libraries, no network requests, escape apostrophes. Keep all table and column names in one `_data` variable. Ask me for the real column names first. Output one paste-ready DAX measure.
+=========================================================================
+Product Performance
+====================================
+Rebuild the attached "Total sales" Power BI page as ONE DAX measure that returns full HTML/CSS/JS for the HTML Content visual (1280x720). Match the screenshot's 2x2 layout and colors (off-white rounded cards, dark-to-light green palette), but make it cleaner and more premium.
+
+Cards:
+1. Treemap: Total sales by Category. Squarified layout, dark-to-light green by value, with the name and the value (e.g. 135.74K) in each tile.
+2. Map: Total sales by City. No network, so draw bubbles from latitude/longitude on an inline simplified world outline (SVG), with bubble size by sales.
+3. Decomposition tree: Total sales > Category > Sub-Category > Product. Each level shows the top items as bars with a share track, and the value under the name. Clicking an item expands the next level with curved connector lines, and a level header with an X collapses it. Support horizontal scroll or paging for deeper levels.
+4. Combo chart: columns for Total sales and a smooth line for Total profit by Category, with the legend and the value labels on the columns and the line points.
+
+Design: rounded cards, soft shadows, smooth transitions, animated numbers, bars, lines and treemap tiles, and a tooltip on every element (sales, profit, quantity, orders, share %).
+
+Replace slicers with a JS filter system (no Power BI slicers):
+- "Filters" button with an active-count badge, plus "Reset filters"
+- Slide-in side panel with a veil and blur, closing via X, the veil, or Escape
+- Multi-select chips for Year (quick: All / Last 2 / Last 3), Region, Category and Ship Mode
+- Staged state: nothing changes until "Apply filters"
+- Empty group = All; OR within a group, AND between groups
+- Removable chips for active filters
+- Click a tile, bubble, tree node, column or point to cross-select it (others dimmed, all four visuals update)
+- One renderAll() redraws everything
+
+Rules: ES5 JS only, no libraries, no network requests, escape apostrophes. Keep all table and column names in one `_data` variable. Ask me for the real column names first (Order ID, Order Date, Region, Category, Sub-Category, Product, City, Latitude, Longitude, Ship Mode, Quantity, Sales, Profit). Output one paste-ready DAX measure.
